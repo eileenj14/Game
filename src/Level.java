@@ -1,12 +1,25 @@
 public class Level
 {
-    /** Returns true if the player reached the goal on this level and returns false otherwise */
+    private boolean goalReached;
+    private int points;
+
+    /**
+     * Returns true if the player reached the goal on this level and returns false
+     * otherwise
+     */
     public boolean goalReached()
     {
-        return true;
+        return goalReached;
     }
 
-    /** Returns the number of points (a positive integer) recorded for this level */
+    public void reachGoal()
+    {
+        goalReached = true;
+    }
+
+    /**
+     * The number of points (a positive integer) recorded for this level
+     */
     public int getPoints()
     {
         return 0;

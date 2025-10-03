@@ -7,7 +7,9 @@ public class Game
     /** Postcondition: All instance variables have been initialized. */
     public Game()
     {
-
+        levelOne = new Level();
+        levelTwo = new Level();
+        levelThree = new Level();
     }
 
     /** Returns true if this game is a bonus game and returns false otherwise */
