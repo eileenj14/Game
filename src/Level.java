@@ -22,6 +22,11 @@ public class Level
      */
     public int getPoints()
     {
-        return 0;
+        return points;
+    }
+
+    public void setPoints(int p)
+    {
+        points = p;
     }
 }
