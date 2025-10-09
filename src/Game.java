@@ -44,7 +44,16 @@ public class Game
      */
     public void play()
     {
-
+        System.out.println("Enter the number of points for level one.");
+        Scanner s = new Scanner(System.in);
+        levelOne.setPoints(s.nextInt());
+        levelOne.reachGoal();
+        System.out.println("Enter the number of points for level two.");
+        levelTwo.setPoints(s.nextInt());
+        levelTwo.reachGoal();
+        System.out.println("Enter the number of points for level three.");
+        levelThree.setPoints(s.nextInt());
+        levelThree.reachGoal();
     }
 
     /**
@@ -76,6 +85,17 @@ public class Game
      */
     public int playManyTimes(int num)
     {
-        return 0;
+        int max = 0;
+        int gameNum = 1;
+        while (num > 0)
+        {
+            System.out.println("Game " + gameNum);
+            play();
+            int score = getScore();
+            if (score > max) max = score;
+            num--;
+            gameNum++;
+        }
+        return max;
     }
 }

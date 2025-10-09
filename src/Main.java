@@ -36,5 +36,8 @@ public class Main
         four.getLevel(3).reachGoal();
         four.getLevel(3).setPoints(500);
         System.out.println(four.getScore());
+
+        Game five = new Game();
+        System.out.println(five.playManyTimes(4));
     }
 }
